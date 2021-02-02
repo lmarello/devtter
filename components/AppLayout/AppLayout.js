@@ -1,17 +1,14 @@
+import styles from './AppLayout.styles';
 
-import styles from './AppLayout.module.css';
-import Link from 'next/link';
-
-export default function ({ children }) {
+export default function AppLayout({ children }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">Devtter!</a>
-      </h1>
-      <nav className={styles.nav}>
-        <Link href="/timeline">Timeline</Link>
-      </nav>
-      {children}
-    </main>
+    <>
+      <div>
+        <main>
+          {children}
+        </main>
+      </div>
+      <style jsx>{styles}</style>
+    </>
   );
 }
