@@ -1,6 +1,7 @@
 import * as React from "react"
+import PropTypes from "prop-types"
 
-export default function GitHub(props) {
+function GitHub(props) {
   return (
     <svg
       width={1024}
@@ -18,3 +19,9 @@ export default function GitHub(props) {
     </svg>
   )
 }
+
+GitHub.propTypes = {
+  fill: PropTypes.string.isRequired,
+}
+
+export default GitHub

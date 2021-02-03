@@ -1,14 +1,19 @@
-import styles from './AppLayout.styles';
+import styles from "./AppLayout.styles"
+import PropTypes from "prop-types"
 
-export default function AppLayout({ children }) {
+function AppLayout({ children }) {
   return (
     <>
       <div>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
       <style jsx>{styles}</style>
     </>
-  );
+  )
 }
+
+AppLayout.propTypes = {
+  children: PropTypes.element.isRequired,
+}
+
+export default AppLayout

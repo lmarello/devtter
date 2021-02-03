@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { AppLayout } from '../components/AppLayout';
-import { Button } from '../components/Button';
-import styles from '../styles/Home.styles';
-import { GitHub } from '../components/Icons';
-import { loginWithGitHub, onAuthStateChanged } from '../firebase/client';
+import { useState, useEffect } from "react"
+import Head from "next/head"
+import { AppLayout } from "../components/AppLayout"
+import { Button } from "../components/Button"
+import styles from "../styles/Home.styles"
+import { GitHub } from "../components/Icons"
+import { loginWithGitHub, onAuthStateChanged } from "../firebase/client"
 
 export default function Home() {
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState(undefined)
 
   useEffect(() => {
-    onAuthStateChanged(setUser);
-  }, []);
+    onAuthStateChanged(setUser)
+  }, [])
 
   const handleClick = () => {
     loginWithGitHub()
       .then((user) => {
-        setUser(user);
+        setUser(user)
       })
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function Home() {
           <div>
             {user === null && (
               <Button onClick={handleClick}>
-                <GitHub width={24} height={24} fill={'#fff'} />
+                <GitHub width={24} height={24} fill={"#fff"} />
                 Login with GitHub
               </Button>
             )}
@@ -53,5 +53,5 @@ export default function Home() {
       </AppLayout>
       <style jsx>{styles}</style>
     </>
-  );
+  )
 }

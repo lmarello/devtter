@@ -1,12 +1,12 @@
-import css from 'styled-jsx/css';
-import { colors } from '../styles/theme';
+import css from "styled-jsx/css"
+import { colors } from "../styles/theme"
 
 export default css`
   section {
-      display: grid;
-      place-items: center;
-      place-content: center;
-      height: 100%;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    height: 100%;
   }
   img {
     width: 120px;
@@ -26,4 +26,4 @@ export default css`
   div {
     margin-top: 16px;
   }
-`;
+`

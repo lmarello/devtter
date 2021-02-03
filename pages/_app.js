@@ -1,6 +1,7 @@
-import styles from '../styles/globals';
+import styles from "../styles/globals"
+import PropTypes from "prop-types"
 
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
@@ -8,5 +9,12 @@ export default function MyApp({ Component, pageProps }) {
         {styles}
       </style>
     </>
-  );
+  )
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.func.isRequired,
+  pageProps: PropTypes.object,
+}
+
+export default MyApp

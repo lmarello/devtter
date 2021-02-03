@@ -1,5 +1,5 @@
-import css from 'styled-jsx/css';
-import { breakpoints } from '../../styles/theme';
+import css from "styled-jsx/css"
+import { breakpoints } from "../../styles/theme"
 
 export default css`
   div {
@@ -22,4 +22,4 @@ export default css`
       max-width: ${breakpoints.mobile};
     }
   }
-`;
+`
