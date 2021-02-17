@@ -1,10 +1,18 @@
-import styles from "../styles/globals"
+import styles from "styles/globals"
 import PropTypes from "prop-types"
+import Head from "next/head"
+import { AppLayout } from "components/AppLayout"
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <Head>
+        <title>devtter 🐦</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
       <style jsx global>
         {styles}
       </style>
