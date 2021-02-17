@@ -1,5 +1,5 @@
 import css from "styled-jsx/css"
-import { breakpoints } from "../../styles/theme"
+import { breakpoints } from "styles/theme"
 
 export default css`
   div {

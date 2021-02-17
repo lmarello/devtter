@@ -1,6 +1,6 @@
 import styles from "./Timeline.module.css"
 import Link from "next/link"
-import { AppLayout } from "../../components/AppLayout"
+import { AppLayout } from "components/AppLayout"
 import PropTypes from "prop-types"
 
 function Timeline({ name }) {
