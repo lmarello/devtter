@@ -6,7 +6,12 @@ import { loginWithGitHub, onAuthStateChanged } from "firebase/client"
 import { useRouter } from "next/router"
 
 export default function Index() {
-  const [user, setUser] = useState(undefined)
+  const USER_STATES = {
+    NOT_LOGGED: null,
+    UNKNOW: undefined,
+  }
+
+  const [user, setUser] = useState(USER_STATES.UNKNOW)
   const router = useRouter()
 
   useEffect(() => {
@@ -18,11 +23,7 @@ export default function Index() {
   }, [user])
 
   const handleClick = () => {
-    loginWithGitHub()
-      .then((user) => {
-        setUser(user)
-      })
-      .catch((err) => console.log(err))
+    loginWithGitHub().catch((err) => console.log(err))
   }
 
   return (
@@ -35,13 +36,13 @@ export default function Index() {
           with developers 💻
         </h2>
         <div>
-          {user === null && (
+          {user === USER_STATES.NOT_LOGGED && (
             <Button onClick={handleClick}>
               <GitHub width={24} height={24} fill={"#fff"} />
               Login with GitHub
             </Button>
           )}
-          {user === undefined && <img src="/spinner.gif" />}
+          {user === USER_STATES.UNKNOW && <img src="/spinner.gif" />}
         </div>
       </section>
       <style jsx>{styles}</style>

@@ -5,23 +5,23 @@ export default css`
     position: sticky;
     height: 49px;
     top: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     width: 100%;
-  }
-  section {
-    padding-top: 49px;
+    background: white;
   }
 
   h2 {
     font-weight: 700;
     font-size: 21px;
+    padding-left: 15px;
   }
 
   nav {
-    position: sticky;
+    background: white;
+    border-top: 1px solid #eee;
     bottom: 0;
-    border-top: 1px solid #ccc;
     height: 49px;
+    position: sticky;
     width: 100%;
   }
 `

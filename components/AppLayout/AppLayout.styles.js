@@ -13,6 +13,7 @@ export default css`
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     height: 100%;
+    overflow-y: auto;
     width: 100%;
   }
 
