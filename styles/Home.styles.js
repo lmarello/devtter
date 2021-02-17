@@ -12,13 +12,13 @@ export default css`
     width: 120px;
   }
   h1 {
-    color: ${colors.secondary};
-    font-size: 24px;
+    color: ${colors.primary};
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 8px;
   }
   h2 {
-    color: ${colors.primary};
+    color: ${colors.secondary};
     font-size: 21px;
     margin: 0;
     text-align: center;
