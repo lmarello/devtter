@@ -3,14 +3,19 @@ import { Button } from "components/Button"
 import styles from "styles/Home.styles"
 import { GitHub, Logo } from "components/Icons"
 import { loginWithGitHub, onAuthStateChanged } from "firebase/client"
-import Avatar from "components/Avatar/Avatar"
+import { useRouter } from "next/router"
 
 export default function Index() {
   const [user, setUser] = useState(undefined)
+  const router = useRouter()
 
   useEffect(() => {
     onAuthStateChanged(setUser)
   }, [])
+
+  useEffect(() => {
+    user && router.replace("/home")
+  }, [user])
 
   const handleClick = () => {
     loginWithGitHub()
@@ -36,7 +41,7 @@ export default function Index() {
               Login with GitHub
             </Button>
           )}
-          {user?.avatar && <Avatar src={user.avatar} username={user.email} />}
+          {user === undefined && <img src="/spinner.gif" />}
         </div>
       </section>
       <style jsx>{styles}</style>
