@@ -1,2 +1,8 @@
+export { default as ArrowLeft } from "./ArrowLeft"
+export { default as Create } from "./Create"
 export { default as GitHub } from "./GitHub"
+export { default as Home } from "./Home"
+export { default as Like } from "./Like"
 export { default as Logo } from "./Logo"
+export { default as Reuse } from "./Reuse"
+export { default as Search } from "./Search"
