@@ -1,8 +1,10 @@
 import PropTypes from "prop-types"
 import { Avatar } from "components/Avatar"
 import styles from "./Devit.styles"
+import useTimeAgo from "../../hooks/useTimeAgo"
+function Devit({ username, message, id, avatar, createdAt, userId }) {
+  const timeAgo = useTimeAgo(createdAt)
 
-function Devit({ username, message, id, avatar }) {
   return (
     <>
       <article key={id}>
@@ -10,7 +12,11 @@ function Devit({ username, message, id, avatar }) {
           <Avatar src={avatar} alt={username} />
         </div>
         <section>
-          <strong>{`@${username}`}</strong>
+          <header>
+            <strong>{`@${username}`}</strong>
+            <span> - </span>
+            <date>{timeAgo}</date>
+          </header>
           <p>{message}</p>
         </section>
       </article>
@@ -23,7 +29,9 @@ Devit.propTypes = {
   username: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  userId: PropTypes.string.isRequired,
 }
 
 export default Devit

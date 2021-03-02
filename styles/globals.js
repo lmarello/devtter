@@ -13,10 +13,10 @@ export default css.global`
     background-size: 50px 50px;
     padding: 0;
     margin: 0;
-    font-family: ${fonts.base};
     overflow: hidden;
   }
   * {
     box-sizing: border-box;
+    font-family: ${fonts.base};
   }
 `

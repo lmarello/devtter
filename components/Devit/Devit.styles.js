@@ -13,4 +13,8 @@ export default css`
     line-height: 1.3225;
     margin: 0;
   }
+  date {
+    color: #555;
+    font-size: 14px;
+  }
 `

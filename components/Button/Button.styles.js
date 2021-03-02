@@ -16,6 +16,12 @@ export default css`
     transition: opacity 0.3s ease;
   }
 
+  button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+
   button > :global(svg) {
     margin-right: 8px;
   }

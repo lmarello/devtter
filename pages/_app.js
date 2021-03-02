@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>devtter 🐦</title>
+        <title>Devtter 🐦</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppLayout>

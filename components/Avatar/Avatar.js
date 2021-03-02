@@ -11,9 +11,13 @@ function Avatar({ src, username }) {
   )
 }
 
+Avatar.defaultProps = {
+  username: "",
+}
+
 Avatar.propTypes = {
   src: PropTypes.string.isRequired,
-  username: PropTypes.isRequired,
+  username: PropTypes.string.isRequired,
   withText: PropTypes.bool,
 }
 
