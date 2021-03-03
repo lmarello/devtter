@@ -2,8 +2,11 @@ import PropTypes from "prop-types"
 import { Avatar } from "components/Avatar"
 import styles from "./Devit.styles"
 import useTimeAgo from "../../hooks/useTimeAgo"
+import useDateTimeFormat from "hooks/useDateTimeFormat"
+
 function Devit({ username, message, id, avatar, createdAt, userId, img }) {
   const timeAgo = useTimeAgo(createdAt)
+  const createdAtFormated = useDateTimeFormat(createdAt)
 
   return (
     <>
@@ -15,7 +18,7 @@ function Devit({ username, message, id, avatar, createdAt, userId, img }) {
           <header>
             <strong>{`@${username}`}</strong>
             <span> - </span>
-            <date>{timeAgo}</date>
+            <time title={createdAtFormated}>{timeAgo}</time>
           </header>
           <p>{message}</p>
           {img && <img src={img} />}
