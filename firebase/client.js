@@ -36,12 +36,13 @@ export const loginWithGitHub = () => {
   return firebase.auth().signInWithPopup(gitHubProvider)
 }
 
-export const addDevit = ({ avatar, userName, userId, content }) => {
+export const addDevit = ({ avatar, userName, userId, content, img }) => {
   return db.collection("devits").add({
     avatar,
     userName,
     userId,
     content,
+    img,
     createdAt: firebase.firestore.Timestamp.fromDate(new Date()),
     likesCount: 0,
     sharedCount: 0,

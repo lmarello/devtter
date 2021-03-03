@@ -13,6 +13,11 @@ export default css`
     line-height: 1.3225;
     margin: 0;
   }
+  img {
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
   date {
     color: #555;
     font-size: 14px;

@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import { Avatar } from "components/Avatar"
 import styles from "./Devit.styles"
 import useTimeAgo from "../../hooks/useTimeAgo"
-function Devit({ username, message, id, avatar, createdAt, userId }) {
+function Devit({ username, message, id, avatar, createdAt, userId, img }) {
   const timeAgo = useTimeAgo(createdAt)
 
   return (
@@ -18,6 +18,7 @@ function Devit({ username, message, id, avatar, createdAt, userId }) {
             <date>{timeAgo}</date>
           </header>
           <p>{message}</p>
+          {img && <img src={img} />}
         </section>
       </article>
       <style jsx>{styles}</style>
@@ -32,6 +33,7 @@ Devit.propTypes = {
   id: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
   userId: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 }
 
 export default Devit
