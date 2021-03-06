@@ -6,6 +6,7 @@ import { fetchLatestDevits } from "firebase/client"
 import Link from "next/link"
 import { Create, Home, Search } from "components/Icons"
 import Head from "next/head"
+import { Header } from "components/Header"
 
 export default function HomePage() {
   const [timeline, setTimeline] = useState([])
@@ -20,9 +21,7 @@ export default function HomePage() {
       <Head>
         <title>Inicio / Devtter 🐦</title>
       </Head>
-      <header>
-        <h2>Inicio</h2>
-      </header>
+      <Header title="Inicio" />
       <section>
         {timeline.map(
           ({ id, userName, avatar, content, createdAt, userId, img }) => (
