@@ -18,7 +18,7 @@ export default css`
     border-radius: 10px;
     margin-top: 10px;
   }
-  date {
+  time {
     color: #555;
     font-size: 14px;
   }
