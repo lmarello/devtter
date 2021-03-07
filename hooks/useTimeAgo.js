@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { DEFAULT_LANGUAGE } from "constants/locale"
 
 const DATE_UNITS = [
   ["day", 86400],
@@ -28,7 +29,7 @@ const getDateDiffs = (timestamp) => {
 
 const getTimeAgo = (timestamp) => {
   const { value, unit } = getDateDiffs(timestamp)
-  const rtf = new Intl.RelativeTimeFormat(navigator.language, {
+  const rtf = new Intl.RelativeTimeFormat(DEFAULT_LANGUAGE, {
     style: "long",
   })
   return rtf.format(value, unit)
