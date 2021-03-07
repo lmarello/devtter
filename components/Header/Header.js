@@ -16,7 +16,7 @@ const Header = ({ title, Icon }) => {
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  Icon: PropTypes.element,
+  Icon: PropTypes.func,
 }
 
 export default Header

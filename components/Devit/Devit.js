@@ -44,9 +44,9 @@ Devit.propTypes = {
   message: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  createdAt: PropTypes.string.isRequired,
+  createdAt: PropTypes.number.isRequired,
   userId: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
 }
 
 export default Devit
